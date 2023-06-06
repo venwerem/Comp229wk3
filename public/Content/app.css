@@ -1,9 +1,13 @@
 /* custom css goes here */
 /* main css*/
+/*Vivian Enwerem
+301318591
+5th June 2023*/
+
 main
 {
     background-color: #fff;
-    box-sizing: border-box;
+    
     font-family: 'Centra', 'sans-serif';
     margin-bottom: 50px;
 }
@@ -22,7 +26,7 @@ main
     font-weight: 700;
     letter-spacing: 0.8px;
     padding: 8px 10px;
-    background: linear-gradient(90.21deg, rgba(246, 45, 22, 0.5) -5.91%, rgba(231, 88, 6, 0.642) 111.58%);
+    background: #99adc8;
     border: 1px solid rgba(255, 255, 255, 0.565);
     font-size: 20px;
     margin-bottom: 16px;
@@ -49,7 +53,6 @@ main
     white-space: nowrap;
     overflow: hidden;
 }
-  
 .aboutme
  {
     margin-top: 250px;
@@ -59,19 +62,37 @@ main
  {
     text-decoration: none;
     color: inherit;
+    font-size: 20px;
+
+ }    
+  /* about css */
+.about
+ {
+    margin: auto;
+    padding:15px 85px 15px 85px;
+
+ } 
+ .about img
+ {
+    border-radius: 30%;
+ }
+.about a
+ {
+    color: #99adc8;
+    font-size: italic;
  }  
- /* :root{
-    /* color type A */
-    /* --line_color : #555555 ;
-    --back_color : #FFECF6  ; */
+ .about h1 h2 
+{
+    color: white;
+}
+.highlight
+{
+font-weight: 600;
+color: #99adc8;
+font-size: 30px;
+}
 
-    /* color type B */
-    /* --line_color : #1b1919 ;
-    --back_color : #E9ECFF  ; */
-
-    /* color type C */
-    /* --line_color : #00135C ;
-    --back_color : #DEFFFA  ; */
+ 
 
 
 .button{
@@ -171,7 +192,9 @@ form
     border-radius: 10px;
     background-color: #f8f9fb;
     margin: 50px;
+    padding: 15px 32px;
   }
+
 .box {
     display: flex;
     align-items: center;
@@ -187,6 +210,200 @@ form
   .text-center {
     text-align: center;
   }
+ /* form css */
+  .form-button button
+  {
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 12px;
+    background-color:#99adc8;
+  }
+/* projectpage css   */
+.project-main 
+{
+    padding: 20px 20px 20px 20px;
+}
+
+.project-main h6
+{
+    padding: 12px;
+}
+
+.row-pro {
+    margin: 8px -16px;
+  }
   
+  
+  .row-pro,
+  .row-pro > .column-pro {
+    padding: 6px;
+  }
+  
+  
+  .column-pro {
+    float: left;
+    width: 13%;
+   
+  }
+  
+ 
+  .row-pro:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+ 
+  .content-pro {
+    background-color: white;
+    padding: 8px;
+    border: #333;
+  }
+  
+  
+  @media screen and (max-width: 900px) {
+    .column-pro {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .column-pro {
+      width: 100%;
+    }
+}
+
+.column-listproject {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  
+.row-listproject::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.project-button
+ {
+    margin-top: 50px;
+    
+
+ } 
+.project-button a
+ {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+
+ }  
+ 
+
+
+/* servicesPage css */
+.services
+{
+    background-image:url("/Assets/images/background.png") ;
+    padding:15px 32px; 
+    text-align: center;
+}
+.services h1
+{
+    padding:15px 32px;
+    font-weight: 800;
+}
+
+.container-img {
+    position: relative;
+    width: 50%;
+    padding:15px 32px;
+  }
+  
+  .image {
+    display: block;
+    height: 400px;
+    width: 620px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:#99adc8;
+  }
+  
+  .container-img:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33%;
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}
+
+
+
   
    
