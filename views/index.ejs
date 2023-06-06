@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Css section -->
+  <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css'/>
+  <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
+
+  <link rel='stylesheet' href='/Content/app.css' />
+
+</head>
+<body>
+  
+  <!-- Main nav -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand active" href="/home">
+        <img src="/Assets/images/V.png" alt="Vivian's logo" width="40" height="55">
+      </a>
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+    </div>
+   
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <% if (title === 'Home') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/home">Home</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/home">Home</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'About') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/about">About</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Projects') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/projects">Project</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/projects">Project</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Services') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/services">Services</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/services">Service</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Contact') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/contact">Contact</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        <% } %>
+        </li>
+       
+       </ul>
+          
+    </div>
+  </nav>
+  <!-- Main Content -->
+  <main class="container">   
+    <div>
+      <span>Welcome to my Portfolio</span>
+      <h1>Hi!</h1>
+      <h1>I'm Vivian </h1>
+      <div id="typing-text"></div>
+      <div class="aboutme">
+      <button class="button"><a href ="/about">About Me </a></button></div>
+
+    </div> 
+  
+  </main>
+  
+  <!-- Bottom nav -->
+  <footer>
+    <nav class="navbar sticky-bottom bg-body-tertiary">
+      <div class="container-fluid">
+        <h6 class="navbar-text text-center">&copy; copyright 2023 All rights reserved by Vivian</h6>
+      </div>
+    </nav>
+  </footer>
+  
+
+<!-- Script Section -->
+  <script src="/Scripts/app.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/jquery/dist/jquery.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
