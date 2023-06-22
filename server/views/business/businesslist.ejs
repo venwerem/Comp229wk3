@@ -1,0 +1,58 @@
+<%- include ../partials/main_nav.ejs %>
+  <main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <h1><%= title %></h1>
+
+            <% if (typeof displayName == 'string' && displayName) { %>
+              <a href="/business_contacts/add"class="btn btn-primary" role="button">
+                  <i class="fas fa-plus-circle"></i>  Add a Contact</a>
+          <% } %>
+            <br>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header row -->
+                <tr>
+                  <% if (typeof displayName == 'string' && displayName) { %>
+                    <th class="text-center col-2"> Contact Name</th>
+                    <th class="text-center col-2">Contact Email</th>
+                    <th class="text-center col-2">Contact Phone</th>
+                    <th class="text-center col-1"></th>
+                    <th class="text-center col-1"></th>
+                  <% } else { %>
+                    <th class="text-center col-2"> Contact Name</th>
+                    <th class="text-center col-2">Contact Email</th>
+                    <th class="text-center col-2">Contact Phone</th>
+                  <% } %>
+                </tr>
+                <!-- Repeatable table template row  -->
+                <% for(let count = 0; count < businessList.length; count++){ %>
+                    <tr>
+                      <% if (typeof displayName == 'string' && displayName) { %>
+                        <td class="text-center col-2"><%= businessList[count].Contact_Name %></td>
+                        <td class="text-center col-2"><%= businessList[count].Contact_Email %></td>
+                        <td class="text-center col-2"><%= businessList[count].Phone_Number %></td>
+                        <td class="text-center col-1">
+                           <a href= "/business_contacts/edit/<%= businessList[count]._id%>" class="btn btn-primary btn-sm">
+                           <i class="fas fa-pencil-alt"></i>Edit</a></td>
+                        <td class="text-center col-1">
+                        <a href= "/business_contacts/delete/<%= businessList[count]._id%>" class="btn btn-danger btn-sm">
+                          <i class="fas fa-trash-alt"></i>Delete</a></td>
+                          <% } else { %>
+                        <td class="text-center col-2"><%= businessList[count].Contact_Name %></td>
+                        <td class="text-center col-2"><%= businessList[count].Contact_Email %></td>
+                        <td class="text-center col-2"><%= businessList[count].Phone_Number %></td>
+                        <% } %>
+                    </tr>
+                <% } %>
+            </table>  
+        </div>
+    </div>
+  </main>
+  <%- include ../partials/footer.ejs %>
+      
+   
+    <!-- Script Section -->
+      <script src="/Scripts/app.js"></script>
+      <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="/jquery/dist/jquery.min.js"></script>

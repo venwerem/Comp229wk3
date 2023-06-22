@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Css section -->
+  <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css'/>
+  <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
+
+  <link rel='stylesheet' href='/Content/app.css' />
+
+</head>
+<body>
+  
+  <!-- Main nav -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand active" href="/home">
+        <img src="/Assets/images/V.png" alt="Vivian's logo" width="40" height="55">
+      </a>
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+    </div>
+   
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <% if (title === 'Home') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/home">Home</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/home">Home</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'About') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/about">About</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Projects') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/projects">Project</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/projects">Project</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Services') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/services">Services</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/services">Service</a>
+        <% } %>
+        </li>
+        
+        <% if (title === 'Business List') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/business_contacts">Business </a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/business_contacts">Business </a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Contact') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/contact">Contact</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        <% } %>
+        </li>
+       
+       </ul>
+          
+    </div>
+  </nav>
+<main>
+    <div class="services">
+        <h1>Some Of the Services I Provide</h1>
+    
+    <div class="row">
+        <div class="column">
+          <div class="content">
+            <img src="/Assets/images/webd.jpg" alt="web-design-image" style="width:100%">
+            <h3>Web Design</h3>
+            <p>Creating and designing the visual layout, aesthetics, and user experience of your website. It involves a combination of graphic design, typography, color theory, and user interface (UI) principles to create visually appealing and functional websites. I focus on creating engaging and intuitive user interfaces that enhance the overall user experience.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+          <img src="/Assets/images/ux:ui.jpg" alt="ux-ui-image" style="width:100%">
+            <h3>UX/UI</h3>
+            <p>UX (User Experience) and UI (User Interface) design are closely related disciplines that focus on creating user-centric digital experiences. UX design involves understanding user behaviors, needs, and motivations to design products or services that are easy to use, efficient, and enjoyable. UI design, on the other hand, focuses on the visual and interactive elements of a digital interface, including buttons, menus, icons, and layout. UX/UI designers work together to ensure that the overall experience is intuitive, visually pleasing, and meets the needs of the target audience.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+          <img src="/Assets/images/software.jpg" alt="software-development-image" style="width:100%">
+            <h3>Software Development</h3>
+            <p>Software development refers to the process of creating, designing, and programming software applications. It involves writing code, testing, debugging, and maintaining software systems. Software developers use programming languages and frameworks to build applications for various platforms, such as desktop, web, and mobile. It involves understanding the requirements to deliver high-quality software solutions that meet user needs. </p>
+          </div>
+        </div>
+</main>
+<footer>
+    <h6 style="text-align: center;">&copy; copyright 2023 Designed and coded with &#x1F5A4; by Vivian Enwerem</h6>
+</footer>
+  
+
+<!-- Script Section -->
+  <script src="/Scripts/app.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/jquery/dist/jquery.min.js"></script>
+
+</body>
+</html>

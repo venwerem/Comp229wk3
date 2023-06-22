@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Css section -->
+  <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css'/>
+  <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
+
+  <link rel='stylesheet' href='/Content/app.css' />
+
+</head>
+<body>
+  
+  <!-- Main nav -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand active" href="/home">
+        <img src="/Assets/images/V.png" alt="Vivian's logo" width="40" height="55">
+      </a>
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+    </div>
+   
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <% if (title === 'Home') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/home">Home</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/home">Home</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'About') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/about">About</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Projects') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/projects">Project</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/projects">Project</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Services') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/services">Services</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/services">Service</a>
+        <% } %>
+        </li>
+
+        <% if (title === 'Business List') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/business_contacts">Business </a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/business_contacts">Business </a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Contact') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/contact">Contact</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        <% } %>
+        </li>
+       
+       </ul>
+          
+    </div>
+  </nav>
+  <main>
+    
+    <h3 class="contact-header" style="text-align: center; margin-top:20px; font-size: 70px;">Let's talk </h3>
+    <h5 style="text-align: center; margin-top:20px; margin-bottom:20px;"> To request a quote or want to grab a coffee, fill out the form and i will get back to you</h5>
+    <div class="box">
+    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_o9tuy0fs.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    </div>
+    <form>
+        <div class="mb-3">
+            <label for="sexampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Full name" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+        </div>
+        <br>
+        <div class="input-group mb-3">
+            <select class="form-select" id="inputGroupSelect02">
+              <option selected>Select Service ....</option>
+              <option value="1">Web Development</option>
+              <option value="2">UX/UI</option>
+              <option value="3">Software Development</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+        </div>
+        
+
+        <div class="form-button"> 
+            <button type="submit">Send Email</button>
+          </div>
+    </form>
+    
+
+  </main>
+  <footer>
+        <h6 style="text-align: center;">&copy; copyright 2023 Designed and coded with &#x1F5A4; by Vivian Enwerem</h6>
+  </footer>
+  
+  
+
+<!-- Script Section -->
+  <script src="/Scripts/app.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/jquery/dist/jquery.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  
+</body>
+</html>

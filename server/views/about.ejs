@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Css section -->
+  <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css'/>
+  <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
+
+  <link rel='stylesheet' href='/Content/app.css' />
+
+</head>
+<body>
+  
+  <!-- Main nav -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand active" href="/home">
+        <img src="/Assets/images/V.png" alt="Vivian's logo" width="40" height="55">
+      </a>
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+    </div>
+   
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <% if (title === 'Home') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/home">Home</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/home">Home</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'About') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/about">About</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Projects') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/projects">Project</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/projects">Project</a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Services') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/services">Services</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/services">Service</a>
+        <% } %>
+        </li>
+
+        <% if (title === 'Business List') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/business_contacts">Business </a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/business_contacts">Business </a>
+        <% } %>
+        </li>
+
+       <% if (title === 'Contact') { %>
+          <li class="nav-item">
+          <a class="nav-link active" href="/contact">Contact</a>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        <% } %>
+        </li>
+       
+       </ul>
+          
+    </div>
+  </nav>
+  <!-- main body -->
+  <main>
+    <div class="about">
+        <h1 style="text-align: left; margin-top:20px; font-size: 70px; background-color: #99adc8;">About Me</h1>
+    <h2 style="text-align: left; margin-top:20px; margin-bottom:20px; color: #99adc8;">  Who is Vivian ?</h2>
+    
+    <img src="/Assets/images/vivPic.jpg" class="img-fluid" alt="Profile Picture"  style="width: 600px; height: 600px;">
+   
+    <p  style="width: 600px; height: 600px; float: right; margin: auto; font-size:20px; word-spacing: 5px;">
+       <span class="highlight">Hi! a little bit about myself.</span> I am a dedicated and motivated individual with a passion for learning and problem-solving.
+        With a strong background in computer science and a love for technology, I thrive in dynamic and challenging environments.
+        I am obtaining a diploma in software engineering at Centennial College.
+        My expertise lies in software development, where I specialize in web and mobile application development.
+        I enjoy collaborating with diverse teams to create innovative solutions that enhance user experiences.
+        Outside of work, I love watching tv shows and enjoy exploring new technologies and trends in the tech industry especially AI.
+        I am constantly seeking opportunities to grow both personally and professionally, and I am excited to take on new challenges that push me outside of my comfort zone.
+    </p>
+    <br><br>
+    <p style="text-align: center; margin-top:15px; font-size: 20px;">Please feel free to take a look at my <a href="/Assets/images/links/EngineeringResume.pdf" target="_blank">Resume</a> for more detailed information about my education and work experience.</p>
+    </div>
+    
+  </main>
+  <footer>
+    <h6 style="text-align: center;">&copy; copyright 2023 Designed and coded with &#x1F5A4; by Vivian Enwerem</h6>
+</footer>
+  
+
+<!-- Script Section -->
+  <script src="/Scripts/app.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/jquery/dist/jquery.min.js"></script>
+
+</body>
+</html>
